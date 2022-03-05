@@ -82,10 +82,10 @@ hr {
 }
 .stats {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  gap: 2rem;
   margin-block-end: 1rem;
 }
 .stats h2 {
