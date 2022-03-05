@@ -1,3 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+html {
+  height: 100%;
+  font-size: 18px;
+}
 body {
   font-family: "Kumbh Sans", sans-serif;
+  min-height: 100%;
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-position: -300px -550px, 750px 350px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: var(--dark-cyan);
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ===Start Here=== */
+main {
+  background-color: white;
+  width: min(85%, 350px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 16px -2px rgba(0, 0, 0, 0.14);
+  box-shadow: 5px 5px 16px -2px rgba(0, 0, 0, 0.14);
+}
+#avatar {
+  z-index: 2;
+  position: relative;
+  bottom: 50px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.info {
+  margin-block-start: -2rem;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.info h1 {
+  font-size: 1rem;
+  margin-block-end: 0.5rem;
+  color: var(--very-dark-blue);
+}
+#age {
+  margin-inline-start: 0.5rem;
+  font-weight: 400;
+  color: var(--dark-gray-blue);
+}
+.info p {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+hr {
+  background-color: var(--dark-gray);
+  opacity: 20%;
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin-block: 1.5rem;
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-block-end: 1rem;
+}
+.stats h2 {
+  font-size: 1rem;
+  color: var(--very-dark-blue);
+  margin-block-end: 0.2rem;
+  font-weight: 700;
+}
+.stats p {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  color: var(--dark-gray-blue);
 }
